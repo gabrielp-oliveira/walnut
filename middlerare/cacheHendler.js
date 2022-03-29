@@ -9,7 +9,6 @@ module.exports = seconds => (req, res, next) =>{
     }else{
         res.originalSend = res.send
         res.send = body => {
-            console.log(body)
             res.originalSend(body)
             myCache.set(key, body, seconds)
         }
