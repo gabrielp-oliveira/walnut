@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const axios = require('axios')
+const cacheHendler = require('../middlerare/cacheHendler')
 
-router.get('/ping', (req, res) => {
+router.get('/ping',cacheHendler(20), (req, res) => {
     try {
         res.status(200)
         return res.json({
@@ -13,7 +14,7 @@ router.get('/ping', (req, res) => {
     }
 })
 
-router.get('/posts', (req, res) => {
+router.get('/posts',cacheHendler(20), (req, res) => {
     function FunctionsortBy(sort = 'id', direction = 'asc', arr) {
         const sortListAccept = ['id', 'reads', 'likes', 'popularity']
     
