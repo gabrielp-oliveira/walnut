@@ -3,15 +3,12 @@
 </strong>, a online technical assessment on the Hatchways plataform. Build with Node/Express js</p>
 
 <h2>install command</h2>
-<span>$ cd walnut</span><br>
 <span>$ npm install</span>
 <br>
 <h2>test command</h2>
-<span>$ cd walnut</span><br>
 <span>$ npm run test</span>
 <br>
 <h2>run command</h2>
-<span>$ cd walnut</span><br>
 <span>$ npm start</span>
 <br>
 <span>$ npm run dev (for local/test objectives)</span><br><br>
